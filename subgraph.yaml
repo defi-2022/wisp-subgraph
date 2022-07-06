@@ -1,0 +1,23 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Wisp
+    network: mumbai
+    source:
+      address: "0x006573CB61a3207d3dfdEfdd196C50447b808A67"
+      abi: Wisp
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Payment
+      abis:
+        - name: Wisp
+          file: ./abis/Wisp.json
+      eventHandlers:
+        - event: Payment(uint256,uint256,bytes,uint32)
+          handler: handlePayment
+      file: ./src/wisp.ts
