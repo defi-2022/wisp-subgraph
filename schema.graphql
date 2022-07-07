@@ -1,6 +1,7 @@
-type ExampleEntity @entity {
+type Payment @entity(immutable: true) {
   id: ID!
-  count: BigInt!
-  publicKey: BigInt! # uint256
-  commitment: BigInt! # uint256
+  publicKey: String!
+  commitment: BigInt!
+  encryptedData: Bytes!
+  sender: String!
 }
