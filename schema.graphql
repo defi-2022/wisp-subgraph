@@ -3,5 +3,7 @@ type Payment @entity(immutable: true) {
   publicKey: String!
   commitment: BigInt!
   encryptedData: Bytes!
-  sender: String!
+  sender: Bytes!
+  txHash: Bytes!
+  blockTimestamp: BigInt!
 }
