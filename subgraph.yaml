@@ -6,9 +6,9 @@ dataSources:
     name: Wisp
     network: mumbai
     source:
-      address: "0x568edc5fC10570142379E4450d4E122AA9704eF7"
+      address: "0x7959E22b1eD9CAa27b21F5c82598339FB68c4a18"
       abi: Wisp
-      startBlock: 27094468
+      startBlock: 27340135
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
