@@ -1,5 +1,6 @@
 type Payment @entity(immutable: true) {
   id: ID!
+  index: BigInt!
   publicKey: String!
   commitment: BigInt!
   encryptedData: Bytes!
